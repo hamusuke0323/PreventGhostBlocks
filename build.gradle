@@ -135,14 +135,17 @@ jar {
 
     manifest {
         attributes([
-                "Specification-Title"     : "${mod_name}",
-                "Specification-Vendor"    : "hamusuke2303",
-                "Specification-Version"   : "${mod_version}", // We are version 1 of ourselves
-                "Implementation-Title"    : "${mod_name}",
-                "Implementation-Version"  : "${mod_version}",
-                "Implementation-Vendor"   : "hamusuke2303",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs"            : mod_mixin_configs.replace('${mod_id}', mod_id)
+                "Specification-Title"        : "${mod_name}",
+                "Specification-Vendor"       : "hamusuke2303",
+                "Specification-Version"      : "${mod_version}", // We are version 1 of ourselves
+                "Implementation-Title"       : "${mod_name}",
+                "Implementation-Version"     : "${mod_version}",
+                "Implementation-Vendor"      : "hamusuke2303",
+                "Implementation-Timestamp"   : new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "FMLCorePlugin"              : mod_core_plugin.replace('${mod_group}', mod_group).replace('${mod_id}', mod_id),
+                "FMLCorePluginContainsFMLMod": "false",
+                "ForceLoadAsMod"             : "true",
+                "MixinConfigs"               : mod_mixin_configs.replace('${mod_id}', mod_id)
         ])
     }
 
