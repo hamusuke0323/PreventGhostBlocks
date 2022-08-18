@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.hamusuke.preventghost.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "NetHandlerPlayServerMixin",
+    "PlayerInteractionManagerMixin"
+  ],
+  "client": [
+    "client.PlayerControllerMPMixin"
+  ],
+  "refmap": "mixins.preventghost.refmap.json"
+}
